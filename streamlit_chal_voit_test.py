@@ -103,6 +103,8 @@ def analyse_Us():
      x='cubicinches', y='hp', size='weightlbs', color='weightlbs', tooltip=['cubicinches', 'hp', 'weightlbs'])
 
     st.altair_chart(data, use_container_width=True)
+    
+    st.markdown ('Les vehicules americain sont tous dans la demesure en poids, cylindrer, cm3 .... ')
 
 def analyse_Japon():
     dj_japon = (df[df['continent'].str.contains("Japan.")])
