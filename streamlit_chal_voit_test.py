@@ -17,7 +17,7 @@ def main():
     
     pages = {
         'Home': homepage,
-        'analyse_europe': analyse_europe,
+        'analyse_Europe': analyse_Europe,
         'analyse_Us': analyse_Us,
         'analyse_Japon': analyse_Japon}
 
@@ -71,7 +71,7 @@ def homepage():
     st.altair_chart(data, use_container_width=True)
     
     
-def analyse_europe():
+def analyse_Europe():
     df_europe = (df[df['continent'].str.contains("Europe.")])
     st.write (df_europe.sort_values(by='cubicinches',ascending=False).head(5))
 
