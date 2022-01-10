@@ -62,7 +62,8 @@ def homepage():
     
     
 def analyse_europe():
-    st.write (df[df['continent'].str.contains("Europe.")])
+    df_europe = (df[df['continent'].str.contains("Europe.")])
+    st.write (df_europe.sort_values(by='cubicinches',ascending=False).head(5))
 
     data = alt.Chart(df[df['continent'].str.contains("Europe.")]).mark_circle().encode(
      x='cubicinches', y='hp', size='weightlbs', color='weightlbs', tooltip=['cubicinches', 'hp', 'weightlbs'])
@@ -72,7 +73,7 @@ def analyse_europe():
 
 def analyse_Us():
     df_us = (df[df['continent'].str.contains("US.")])
-    st.write (df_us.head(5))
+    st.write (df_us.sort_values(by='cubicinches',ascending=False).head(5))
 
     data = alt.Chart(df[df['continent'].str.contains("US.")]).mark_circle().encode(
      x='cubicinches', y='hp', size='weightlbs', color='weightlbs', tooltip=['cubicinches', 'hp', 'weightlbs'])
@@ -80,7 +81,8 @@ def analyse_Us():
     st.altair_chart(data, use_container_width=True)
 
 def analyse_Japon():
-    st.write (df[df['continent'].str.contains("Japan.")])
+    dj_japon = (df[df['continent'].str.contains("Japan.")])
+    st.write (dj_japon.sort_values(by='cubicinches',ascending=False).head(5))
 
     data = alt.Chart(df[df['continent'].str.contains("Japan.")]).mark_circle().encode(
      x='cubicinches', y='hp', size='weightlbs', color='weightlbs', tooltip=['cubicinches', 'hp', 'weightlbs'])
