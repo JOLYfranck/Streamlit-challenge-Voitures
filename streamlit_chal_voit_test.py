@@ -60,6 +60,11 @@ def homepage():
 
     st.pyplot(correlationheat.figure)    
     
+    data = alt.Chart(df).mark_circle().encode(
+     x='cubicinches', y='hp', size='weightlbs', color='continent', tooltip=['cubicinches', 'hp', 'weightlbs'])
+    
+    st.altair_chart(data, use_container_width=True)
+    
     
 def analyse_europe():
     df_europe = (df[df['continent'].str.contains("Europe.")])
