@@ -60,6 +60,11 @@ def homepage():
 
     st.pyplot(correlationheat.figure)    
     
+    st.write ('-----------------------------------------------------------')
+
+    st.markdown('Voila maintenant un graphique Scatterplot par cintimetre cube et chevaux en prenant compte des continents')
+    
+        
     data = alt.Chart(df).mark_circle().encode(
      x='cubicinches', y='hp', size='weightlbs', color='continent', tooltip=['cubicinches', 'hp', 'weightlbs'])
     
