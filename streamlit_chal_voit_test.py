@@ -89,7 +89,8 @@ def analyse_Europe():
      x='cubicinches', y='hp', size='weightlbs', color='weightlbs', tooltip=['cubicinches', 'hp', 'weightlbs'])
 
     st.altair_chart(data, use_container_width=True)
-
+    
+    st.markdown ('Les vehicules europeen sont tous dans une moyenne ni trop lourd ni trop puissant')
 
 def analyse_Us():
     df_us = (df[df['continent'].str.contains("US.")])
@@ -118,7 +119,11 @@ def analyse_Japon():
      x='cubicinches', y='hp', size='weightlbs', color='weightlbs', tooltip=['cubicinches', 'hp', 'weightlbs'])
 
     st.altair_chart(data, use_container_width=True)
-
+    
+    
+    st.markdown ('Les vehicules japonais sont les plus legers et ceux qui ont un consommation faible')
+    
+    
 if __name__ == "__main__":
     main()
 
