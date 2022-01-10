@@ -62,7 +62,7 @@ def homepage():
     
     st.write ('-----------------------------------------------------------')
 
-    st.markdown('Voila maintenant un graphique Scatterplot par cintimetre cube et chevaux en prenant compte des continents')
+    st.markdown('Voila maintenant un graphique Scatterplot par centimetre cube et chevaux en prenant compte des continents')
     
         
     data = alt.Chart(df).mark_circle().encode(
@@ -71,9 +71,19 @@ def homepage():
     st.altair_chart(data, use_container_width=True)
     
     
+   
+    
+    st.markdown ('Comme on peut le voir sur ce graphique les US sont predominant en chevaux, poids et centimetre cube.')
+
+    
+    
 def analyse_Europe():
     df_europe = (df[df['continent'].str.contains("Europe.")])
-    st.write (df_europe.sort_values(by='cubicinches',ascending=False).head(5))
+    st.write (df_europe.sort_values(by='cubicinches',ascending=False))
+
+    st.write ('-----------------------------------------------------------')
+
+    st.markdown('Voila maintenant un graphique Scatterplot par centimetre cube et chevaux en prenant compte le poids')
 
     data = alt.Chart(df[df['continent'].str.contains("Europe.")]).mark_circle().encode(
      x='cubicinches', y='hp', size='weightlbs', color='weightlbs', tooltip=['cubicinches', 'hp', 'weightlbs'])
@@ -83,7 +93,11 @@ def analyse_Europe():
 
 def analyse_Us():
     df_us = (df[df['continent'].str.contains("US.")])
-    st.write (df_us.sort_values(by='cubicinches',ascending=False).head(5))
+    st.write (df_us.sort_values(by='cubicinches',ascending=False))
+
+    st.write ('-----------------------------------------------------------')
+
+    st.markdown('Voila maintenant un graphique Scatterplot par centimetre cube et chevaux en prenant compte le poids')
 
     data = alt.Chart(df[df['continent'].str.contains("US.")]).mark_circle().encode(
      x='cubicinches', y='hp', size='weightlbs', color='weightlbs', tooltip=['cubicinches', 'hp', 'weightlbs'])
@@ -92,7 +106,11 @@ def analyse_Us():
 
 def analyse_Japon():
     dj_japon = (df[df['continent'].str.contains("Japan.")])
-    st.write (dj_japon.sort_values(by='cubicinches',ascending=False).head(5))
+    st.write (dj_japon.sort_values(by='cubicinches',ascending=False))
+
+    st.write ('-----------------------------------------------------------')
+
+    st.markdown('Voila maintenant un graphique Scatterplot par centimetre cube et chevaux en prenant compte le poids')
 
     data = alt.Chart(df[df['continent'].str.contains("Japan.")]).mark_circle().encode(
      x='cubicinches', y='hp', size='weightlbs', color='weightlbs', tooltip=['cubicinches', 'hp', 'weightlbs'])
