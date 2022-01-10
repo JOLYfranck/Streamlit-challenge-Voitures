@@ -7,9 +7,11 @@ import altair as alt
 
 st.title('Challenge Streamlit : build and share data apps')
 
+st.markdown('Voila une analyse de la data Cars.csv')
+
 df = pd.read_csv('https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv', sep=',')
 
-option = st.selectbox('Continent',('Europe','US','Japan'))
+option = st.selectbox('Choisir le continent',('Europe','US','Japan'))
 st.write ('Données par continent selectioné :',df[df['continent'].str.contains(option)])
 
 
