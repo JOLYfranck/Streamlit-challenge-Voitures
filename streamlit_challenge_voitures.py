@@ -10,7 +10,7 @@ st.title('Challenge Streamlit : build and share data apps')
 df = pd.read_csv('https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv', sep=',')
 
 option = st.selectbox('Continent',('Europe','US','Japan'))
-st.write ('Continent:',df[df['continent'].str.contains(option)])
+st.write ('Données par continent selectioné :',df[df['continent'].str.contains(option)])
 
 
 data = alt.Chart(df[df['continent'].str.contains(option)]).mark_circle().encode(
