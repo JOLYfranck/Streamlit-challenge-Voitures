@@ -109,7 +109,7 @@ def analyse_Us():
 
 def analyse_Japon():
     dj_japon = (df[df['continent'].str.contains("Japan.")])
-    st.write (dj_japon.sort_values(by='cubicinches',ascending=False))
+    st.write (dj_japon.sort_values(by='MPG',ascending=True))
 
     st.write ('-----------------------------------------------------------')
 
