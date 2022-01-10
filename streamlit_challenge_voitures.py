@@ -22,9 +22,7 @@ correlationheat = sns.heatmap(df.corr(),
 
 st.pyplot(correlationheat.figure)
 
-scatterplot = sns.scatterplot(data=df, x = 'cubicinches', y = 'hp', hue = 'weightlbs', palette='GnBu')
 
-st.pyplot(scatterplot.figure)
 
 option = st.selectbox('Choisir le continent',('Europe','US','Japan'))
 
