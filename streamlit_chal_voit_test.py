@@ -62,7 +62,7 @@ def homepage():
     
     st.write ('-----------------------------------------------------------')
 
-    st.markdown('Voila maintenant un graphique Scatterplot par centimetre cube et chevaux en prenant compte des continents')
+    st.markdown('Voila maintenant un graphique Scatterplot par centimetre cube et chevaux en prenant compte des continents et des poids des vehicules')
     
         
     data = alt.Chart(df).mark_circle().encode(
