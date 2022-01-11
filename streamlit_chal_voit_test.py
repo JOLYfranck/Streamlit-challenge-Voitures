@@ -78,6 +78,9 @@ def homepage():
     
     
 def analyse_Europe():
+    
+    st.markdown ('En cliquant sur les diffrentes colonnes vous pouvez les classées')
+    
     df_europe = (df[df['continent'].str.contains("Europe.")])
     st.write (df_europe.sort_values(by='cubicinches',ascending=False))
 
@@ -93,6 +96,9 @@ def analyse_Europe():
     st.markdown ('Les vehicules europeen sont tous dans une moyenne ni trop lourd ni trop puissant')
 
 def analyse_Us():
+    
+    st.markdown ('En cliquant sur les diffrentes colonnes vous pouvez les classées')
+    
     df_us = (df[df['continent'].str.contains("US.")])
     st.write (df_us.sort_values(by='cubicinches',ascending=False))
 
@@ -108,6 +114,9 @@ def analyse_Us():
     st.markdown ('Les vehicules americain sont tous dans la demesure en poids, cylindrer, cm3 .... ')
 
 def analyse_Japon():
+    
+    st.markdown ('En cliquant sur les diffrentes colonnes vous pouvez les classées')
+    
     dj_japon = (df[df['continent'].str.contains("Japan.")])
     st.write (dj_japon.sort_values(by='mpg',ascending=True))
 
